@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conway Volume Controller</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🧬 Conway Volume Controller</h1>
+            <p>
+                살아있는 셀의 개수로 볼륨을 조절합니다.
+            </p>
+        </header>
+
+        <section class="stats">
+
+            <div class="card">
+                <h3>Generation</h3>
+                <span id="generation">0</span>
+            </div>
+
+            <div class="card">
+                <h3>Population</h3>
+                <span id="population">0</span>
+            </div>
+
+            <div class="card">
+                <h3>Volume</h3>
+                <span id="volumeText">0%</span>
+            </div>
+
+        </section>
+
+        <section class="board">
+
+            <canvas id="gameCanvas"></canvas>
+
+        </section>
+
+        <section class="controls">
+
+            <button id="runBtn">▶ Run</button>
+
+            <button id="stepBtn">Step</button>
+
+            <button id="randomBtn">Random</button>
+
+            <button id="clearBtn">Clear</button>
+
+            <button id="speedBtn">1x</button>
+
+        </section>
+
+        <section class="volumeSection">
+
+            <h2>Volume</h2>
+
+            <div class="volumeBar">
+
+                <div id="volumeFill"></div>
+
+            </div>
+
+        </section>
+
+        <section class="audioSection">
+
+            <h2>Music</h2>
+
+            <input
+                type="file"
+                id="audioFile"
+                accept="audio/*"
+            >
+
+            <audio
+                id="audio"
+                controls
+            ></audio>
+
+        </section>
+
+        <footer>
+
+            Conway's Game of Life →
+            Population →
+            Volume
+
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
